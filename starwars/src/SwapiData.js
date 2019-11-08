@@ -19,8 +19,7 @@ export default function SwapiData() {
       axios
         .get(`https://swapi.co/api/people/`)
         .then(response => {
-          console.log(response);
-          console.log(response.data.results);
+          //console.log(response);
           setSwapiPeople(response.data.results);
         })
         .catch(error => {
@@ -30,12 +29,15 @@ export default function SwapiData() {
 
     return (
       <CardImportReturnDiv>
-        {SwapiPeople.map( mapItem => {
+        {SwapiPeople.map( (mapItem, index) => {
           return (
             <SwapiCard
               charName={mapItem.name}
+              charBirth={mapItem.birth_year}
               charHeight={mapItem.height}
-              key={mapItem.index}
+              charMass={mapItem.mass}
+              
+              key={index}
             />
           );
         })}

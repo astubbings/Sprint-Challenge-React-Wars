@@ -6,44 +6,51 @@ const WholeCardContainer = styled.div`
   margin: auto;
   margin-top: 2%;
 `
-const ImgContainer = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: 70%;
-`
-// const ImgFromNasa = styled.img`
-//   max-width: 100%;
-// `
-const InfoContainer = styled.div`
-  border: 1px solid lightcyan;
+const NameContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 30%;
-  padding: 0 1%;
+  align-items: flex-end;
+  width: 40%;
+  margin: 1%;
 `
 const NameStyled = styled.h1`
   color: rebeccapurple;
   background-color: paleturquoise;
+  border: 3px solid lightcyan;
+  padding: 2%;
+  margin-top: 0px;
+`
+const StatsContainer = styled.div`
+  border: 3px solid lightcyan;
+  background-color: indianred;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  margin: 1%;
   padding: 1%;
 `
-// const DescTextStyled = styled.p`
-//   padding-left: 2%;
-// `
-// const DateTaken = styled.h2`
-//   padding-left: 2%;
-// `
+const InfoStyled = styled.h3`
+    color: rebeccapurple;
+    margin: 1px;
+    margin-top: 5px;
+`;
+
 const SwapiCard = props => {
     return (
       <WholeCardContainer>
 
-        <ImgContainer>
+        <NameContainer>
         <NameStyled>{props.charName}</NameStyled>
         
-        </ImgContainer>
+        </NameContainer>
 
-        <InfoContainer>
-          {props.charHeight}
-        </InfoContainer>
+        <StatsContainer>
+          
+          <InfoStyled>Birth Year: {props.charBirth}</InfoStyled>
+          <InfoStyled>Height(cm): {props.charHeight}</InfoStyled>
+          <InfoStyled>Mass(kg): {props.charMass}</InfoStyled>
+        </StatsContainer>
           
 
       </WholeCardContainer>

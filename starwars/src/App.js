@@ -5,17 +5,17 @@ import SwapiData from './SwapiData'
 import styled from 'styled-components';
 
 // basic data request so i can see the data structure
-import axios from "axios";
+// import axios from "axios";
 
-axios
-  .get(`https://swapi.co/api/people/`)
-  .then(response => {
-    console.log(response);
+// axios
+//   .get(`https://swapi.co/api/people/`)
+//   .then(response => {
+//     console.log(response);
     
-  })
-  .catch(error => {
-    console.log("the SWAPI person was not returned", error);
-  });
+//   })
+//   .catch(error => {
+//     console.log("the SWAPI person was not returned", error);
+//   });
 
 
 const AppContainer = styled.div`
