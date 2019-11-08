@@ -7,17 +7,17 @@ React is a javascript UI library that allows a developer to easily build user in
 
 2. What does it mean to think in react?
 
-React is a component based front UI libarary. We display data and its referred to as "state". Thinking about how we display data on the page for the end user to see just think that its "Just the View"
+React is a component based frontend UI library. We display data and its referred to as "state". Thinking about how we display data on the page for the end user to see. Just think that its "Just the View" from that MVC. The V in MVC.
 
 
 3. Describe state.
 
-The state object is where you store property values that belongs to the component. When the state object changes, the component re-renders.
+The state object is where you store data property values that belongs to the component. When the state object changes, the component re-renders.
 
 
 4. Describe props.
 
-React allows us to pass information to a Component using something called props (stands for properties). Props are basically kind of global variable or object.
+React allows us to pass information to a Component using something called props (stands for properties). Props are basically kind of global states (whatever you pass through that state).
 
 
 5. What are side effects, and how do you sync effects in a React component to state or prop changes?

@@ -13,7 +13,7 @@ const CardImportReturnDiv = styled.div`
 
 export default function SwapiData() {
     
-    const [SwapiPeople, setSwapiPeople] = useState([]);
+    const [swapiPeople, setSwapiPeople] = useState([]);
   
     useEffect(() => {
       axios
@@ -29,27 +29,18 @@ export default function SwapiData() {
 
     return (
       <CardImportReturnDiv>
-        {SwapiPeople.map( (mapItem, index) => {
+        {swapiPeople.map( (mapItem, index) => {
           return (
             <SwapiCard
               charName={mapItem.name}
               charBirth={mapItem.birth_year}
               charHeight={mapItem.height}
               charMass={mapItem.mass}
-              
               key={index}
             />
           );
         })}
         
-        
-        {/* <NasaCard
-              imgUrl={nasaPhotos.url}
-              date={nasaPhotos.date}
-              title={nasaPhotos.title}
-              desc={nasaPhotos.explanation}
-            /> */}
-
       </CardImportReturnDiv>
     );
   };
